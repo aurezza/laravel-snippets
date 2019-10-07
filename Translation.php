@@ -74,6 +74,7 @@ class TranslationService
             if (!file_exists(dirname($tokenPath))) {
                 mkdir(dirname($tokenPath), 0700, true);
             }
+            
             file_put_contents($tokenPath, json_encode($client->getAccessToken()));
         }
         return $client;
